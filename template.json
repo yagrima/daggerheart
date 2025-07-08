@@ -18,8 +18,10 @@
                 "presence": 0,
                 "knowledge": 0,
                 "currenthp": 5,
+                "maxhp":5,
                 "currentstress": 5,
-                "currenthope": 0,
+                "maxstress":5,
+                "armorbasescore":0,
                 "damagethreshold1":1,
                 "damagethreshold2":2,
                 "damagethreshold3":3
@@ -29,43 +31,44 @@
             "templates": ["nonemptypersondata"],
             "type": "PC",
             "pronouns": "N.N.",
-            "heritage": "N.N.",
+            "ancestry": "N.N.",
+            "community": "N.N.",
             "class": "N.N.",
             "subclass": "N.N.",
             "domains": [],
-            "features": ["class feature","foundation feature","specialisation feature","mastery feature"],
-            "multiclassfeatures": ["class feature","foundation feature"],
+            "domaincards": [],
+            "features": ["hope feature","class feature","foundation feature","specialisation feature","mastery feature"],
+            "multiclassfeatures": ["hope feature","class feature","foundation feature"],
             "spellcasttrait": "N.N.",
+            "currenthope": 0,
+            "maxhope":0,
             "level": 1,
             "progression": [],
-            "experiences": {"taken at level 1":2,"taken at level 1":2,"taken at level 2":0,"taken at level 5":0,"taken at level 8":0,"placeholder for homebrew":0},
+            "experiences": {"taken at level 1 #1":2,"taken at level 1 #2":2,"taken at level 2":0,"taken at level 5":0,"taken at level 8":0,"placeholder for homebrew":0},
             "items": [],
             "primaryweapon": [],
             "secondaryweapon": [],
             "gold": {"coins":0,"handfuls":0,"bags":0,"chests":0},
 
+        },
+        "Non Player Character (nyi)":{
+            "not yet implemented":true
+        },
+        "Companion (nyi)":{
+            "not yet implemented":true
         }
     },
 
     "Item": {
-
         "types":[
-            "Item"
+            "Weapon (nyi)",
+            "Equipment (nyi)"
         ],
-
-        "templates": {
-
-            "generalItems": {
-                "weight": 10,
-                "value": 100,
-                "description": ""
-            }
+        "Weapon (nyi)":{
+            "not yet implemented":true
         },
-
-        "Item": {
-            "templates": ["generalItems"],
-            "type": "item",
-            "quantity": 1
+        "Equipment (nyi)":{
+            "not yet implemented":true
         }
     }
 }

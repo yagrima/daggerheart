@@ -1,24 +1,25 @@
 {
-    "id": "nether",
-    "title": "Nethergard Core System",
-    "description": "The Core System for Nethergard created by Goody",
+    "id": "daggerherart",
+    "title": "Daggerheart Pre-Release",
+    "description": "An inofficial try to play Daggerheart with Foundry VTT 13",
     "version": "0.0.1",
     "authors": [
         {
-            "name": "Goody",
-            "discord": "aradwen"
+            "name": "Yagrima",
+            "discord": "182152404471382016",
+            "role": "System Developer"
         }
     ],
     "compatibility": {
         "minimum": 13,
-        "verified": "13.342",
+        "verified": "13.346",
         "maximum": 13
     },
     "esmodules": [
-        "nether.js"
+        "daggerheart.js"
     ],
     "styles": [
-        "nether.css"
+        "daggerheart.css"
     ],
     "languages": [
         {
@@ -37,7 +38,7 @@
       "distance": 1,
       "units": "Meter"
     },
-    "url": "https://github.com/Thegoodmen/Nethergard-VTT-System",
-    "manifest": "https://github.com/Thegoodmen/Nethergard-VTT-System/releases/latest/download/system.json",
-    "download": "https://github.com/Thegoodmen/Nethergard-VTT-System/releases/download/v0.0.1/system.zip"
+    "url": "https://github.com/yagrima/daggerheart",
+    "manifest": "later",
+    "download": "later"
 }

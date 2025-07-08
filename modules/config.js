@@ -1,6 +1,5 @@
-export const NETHER = {};
+export const DAGGERHEART = {};
 
-NETHER.attributes = {
-    
-    Test: "TEST!"
+DAGGERHEART.attributes = {
+    test: "TEST!"
 }

@@ -2,16 +2,48 @@
     "Actor": {
 
         "types": [
-            "PlayerCharakter"
+            "Player Character",
+            "Non Player Character (nyi)",
+            "Companion (nyi)"
         ],
+        "templates":{
+            "nonemptypersondata"{
+                "name": "N.N.",
+                "evasion": 10,
+                "armor": 0,
+                "agility": 0,
+                "strength": 0,
+                "finesse": 0,
+                "instinct": 0,
+                "presence": 0,
+                "knowledge": 0,
+                "currenthp": 5,
+                "currentstress": 5,
+                "currenthope": 0,
+                "damagethreshold1":1,
+                "damagethreshold2":2,
+                "damagethreshold3":3
+            }
+        },
+        "Player Character":{
+            "templates": ["nonemptypersondata"],
+            "type": "PC",
+            "pronouns": "N.N.",
+            "heritage": "N.N.",
+            "class": "N.N.",
+            "subclass": "N.N.",
+            "domains": [],
+            "features": ["class feature","foundation feature","specialisation feature","mastery feature"],
+            "multiclassfeatures": ["class feature","foundation feature"],
+            "spellcasttrait": "N.N.",
+            "level": 1,
+            "progression": [],
+            "experiences": {"taken at level 1":2,"taken at level 1":2,"taken at level 2":0,"taken at level 5":0,"taken at level 8":0,"placeholder for homebrew":0},
+            "items": [],
+            "primaryweapon": [],
+            "secondaryweapon": [],
+            "gold": {"coins":0,"handfuls":0,"bags":0,"chests":0},
 
-        "PlayerCharakter": {
-
-            "race": "Elf",
-            "gender": "male",
-            "age": "23",
-            "height": "180",
-            "weight": "75"
         }
     },
 

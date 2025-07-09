@@ -7,7 +7,7 @@
             "Companion (nyi)"
         ],
         "templates":{
-            "nonemptypersondata"{
+            "nonemptypersondata":{
                 "name": "N.N.",
                 "evasion": 10,
                 "armor": 0,
@@ -48,8 +48,7 @@
             "items": [],
             "primaryweapon": [],
             "secondaryweapon": [],
-            "gold": {"coins":0,"handfuls":0,"bags":0,"chests":0},
-
+            "gold": {"coins":0,"handfuls":0,"bags":0,"chests":0}
         },
         "Non Player Character (nyi)":{
             "not yet implemented":true

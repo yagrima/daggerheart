@@ -53,13 +53,13 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
         //create basic model with data to input into HTML via Handlebars        
         const baseData = await super._prepareContext();
         let context = {
-            //who are you
+            //who are you, these are booleans
             owner: baseData.document.isOwner,
             isGM: baseData.user.isGM,
             //your permissions
             editable: baseData.editable,
-            //your data
-            config: CONFIG.NETHER,
+            //your data, objects
+            config: CONFIG.DAGGERHEART,
             actor: baseData.document,
             system: baseData.document.system,
             items: baseData.document.items,
@@ -70,18 +70,19 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
         //context = this.calculateExperiance(context);
         
         this.sheetContext = context;
-
         return context;
     }
     
     /** @override */
+    //finishing the initialisation = this method
+    //Memo: Ich habe die Tabs umbenannt!
     _onRender(context, options) {
 
-        const tabs = new foundry.applications.ux.Tabs({navSelector: ".tabs", contentSelector: ".content", initial: "tab1"});
-        tabs.bind(this.element);
+        const maintab = new apps.ux.Tabs({navSelector: ".maintab", contentSelector: ".content", initial: "maintab1"});
+        maintab.bind(this.element);
 
-        const tabs2 = new foundry.applications.ux.Tabs({navSelector: ".tabs2", contentSelector: ".content2", initial: "tab2-1"});
-        tabs2.bind(this.element);
+        const sidetab = new apps.ux.Tabs({navSelector: ".sidetab", contentSelector: ".sidecontent", initial: "sidetab1"});
+        sidetab.bind(this.element);
     }
 
 

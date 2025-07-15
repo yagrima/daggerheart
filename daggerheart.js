@@ -1,16 +1,21 @@
 import { DAGGERHEART } from "./modules/config.js";
+import daggerheartActor from "./modules/objects/daggerheartActor.js";
+import daggerheartPCSheet from "./modules/sheets/daggerheartPCSheet.js";
 
 Hooks.once("init", async () => {
 
     console.log("DAGGERHEART | Initalizing Daggerheart Core System");
 
-    // Setting up the Global Configuration Object
+    //setting up the Global Configuration Object
     CONFIG.DAGGERHEART = DAGGERHEART;
     CONFIG.INIT = true;
+    CONFIG.Actor.documentClass = daggerheartActor;
 
     // Register custom Sheets and unregister the start Sheets
+    const DocumentSheetConfig = foundry.applications.apps.DocumentSheetConfig;
+    DocumentSheetConfig.unregisterSheet(Actor, "core", foundry.appv1.sheets.ActorSheet);
+    DocumentSheetConfig.registerSheet(Actor, "daggerheart", daggerheartPCSheet, { types: ["Player Character"], makeDefault: true, label: "DAGGERHEART.PCSheet"});
     // Items.unregisterSheet("core", ItemSheet);
-    // Actors.unregisterSheet("core", ActorSheet);
 
     // Load all Partial-Handlebar Files
     preloadHandlebarsTemplates();
@@ -32,7 +37,11 @@ Hooks.once("ready", async () => {
 function preloadHandlebarsTemplates() {
 
     const templatePaths = [
-        // "systems/daggerheart/templates/partials/template.hbs",
+        "systems/daggerheart/templates/partials/character-sheet-origin.hbs",
+        "systems/daggerheart/templates/partials/character-sheet-domain.hbs",
+        "systems/daggerheart/templates/partials/character-sheet-items.hbs",
+        "systems/daggerheart/templates/partials/character-sheet-progression.hbs",
+        "systems/daggerheart/templates/partials/character-sheet-notes.hbs"
     ];
     
     return loadTemplates(templatePaths);

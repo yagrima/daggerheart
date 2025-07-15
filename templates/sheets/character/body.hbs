@@ -1,0 +1,72 @@
+<div>
+    <div class="sidebox">
+        <div class="fillSideboxTop"></div>
+        <div class="imagebox">
+            <img class="pcImage" src="{{actor.img}}" data-edit="img" data-action="editImage" title="{{actor.name}}" >
+            <div class="imageOverlay">
+                a
+            </div>
+            <div class="nameUnderImage" value="{{actor.name}}"></div>
+        </div>
+        <div class="fillSideboxMiddle"></div>
+
+        <div class="ressourceHealth">
+            <div class="healthBox">{{localize DAGGERHEART.health}}</div>
+        </div>
+        <div class="ressourceStress">
+            <div class="healthBox">{{localize DAGGERHEART.stress}}</div>
+        </div>
+        <div class="ressourceArmor">
+            <div class="healthBox">{{localize DAGGERHEART.health}}</div>
+        </div> 
+        <div class="fillSideboxBottom"></div>
+    </div>
+
+    <div class="menubox">
+        <div class="fillMenuboxTop"></div>
+        <!--Reminder: const maintab = new apps.ux.Tabs({navSelector: ".maintab", contentSelector: ".content", initial: "maintab1"});-->
+        <!--bei Maron: const tabs = new foundry.applications.ux.Tabs({navSelector: ".tabs", contentSelector: ".content", initial: "tab1"});-->
+        <nav class="maintab menuTab" data-group="primary-tabs">  
+            <div class="menuIcon">
+                <a class="item" data-tab="maintab1" data-group="primary-tabs">
+                    <i class="fa-solid fa-book-open-cover"></i>
+                </a>
+            </div>
+            <div class="menuIcon">
+                <a class="item" data-tab="maintab2" data-group="primary-tabs">
+                    <i class="fa-solid fa-book"></i>
+                </a>
+            </div> 
+            <div class="menuIcon">
+                <a class="item" data-tab="maintab3" data-group="primary-tabs">
+                    <i class="fa-solid fa-stars"></i>
+                </a>
+            </div>  
+            <div class="menuIcon">
+                <a class="item" data-tab="maintab4" data-group="primary-tabs">
+                    <i class="fa-solid fa-swords"></i>
+                </a>
+            </div>   
+            <div class="menuIcon">
+                <a class="item" data-tab="maintab5" data-group="primary-tabs">
+                    <i class="fa-solid fa-aperture"></i>
+                </a>
+            </div>   
+            <div class="menuIcon">
+                <a class="item" data-tab="maintab6" data-group="primary-tabs">
+                    <i class="fa-solid fa-bezier-curve"></i>
+                </a>
+            </div>   
+            <div class="menuIcon">
+                <a class="item" data-tab="maintab7" data-group="primary-tabs">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </a>
+            </div>
+        </nav>
+        <div class="fillMenuboxBottom"></div>
+    </div>
+
+    <div class="contextbox">
+        {{localize DAGGERHEART.content}}
+    </div>
+</div>

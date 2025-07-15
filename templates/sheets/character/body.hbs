@@ -67,6 +67,34 @@
     </div>
 
     <div class="contextbox">
-        {{localize DAGGERHEART.content}}
+         <section class="content"> <!-- like in the contentselector above -->
+            <div class="contenttab" data-tab="maintab1" data-group="primary-tabs">
+                {{> "systems/daggerheart/templates/partials/character-sheet-origin.hbs"}}
+            </div>
+
+            <div class="contenttab" data-tab="maintab2" data-group="primary-tabs">
+                {{> "systems/daggerheart/templates/partials/character-sheet-background.hbs"}}
+            </div>
+
+            <div class="contenttab" data-tab="maintab3" data-group="primary-tabs">
+                {{> "systems/daggerheart/templates/partials/character-sheet-domain.hbs"}}
+            </div>
+
+            <div class="contenttab" data-tab="maintab4" data-group="primary-tabs">
+                {{> "systems/daggerheart/templates/partials/character-sheet-items.hbs"}}
+            </div>
+
+            <div class="contenttab" data-tab="maintab5" data-group="primary-tabs">
+                {{> "systems/daggerheart/templates/partials/character-sheet-notes.hbs"}}
+            </div>
+
+            <div class="contenttab" data-tab="maintab6" data-group="primary-tabs">
+                {{localize DAGGERHEART.more}}
+            </div>
+
+            <div class="contenttab" data-tab="maintab7" data-group="primary-tabs">
+                {{localize DAGGERHEART.evenmore}}
+            </div>
+        </section>
     </div>
 </div>

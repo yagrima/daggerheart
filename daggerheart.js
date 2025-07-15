@@ -38,11 +38,11 @@ function preloadHandlebarsTemplates() {
 
     const templatePaths = [
         "systems/daggerheart/templates/sheets/character/partials/origin.hbs",
-        "systems/daggerheart/templates/partials/character-sheet-domain.hbs",
-        "systems/daggerheart/templates/partials/character-sheet-items.hbs",
-        "systems/daggerheart/templates/partials/character-sheet-progression.hbs",
-        "systems/daggerheart/templates/partials/character-sheet-notes.hbs",
-        "systems/daggerheart/templates/partials/character-sheet-background.hbs"
+        "systems/daggerheart/templates/sheets/character/partials/background.hbs",
+        "systems/daggerheart/templates/sheets/character/partials/domain.hbs",
+        "systems/daggerheart/templates/sheets/character/partials/items.hbs",
+        "systems/daggerheart/templates/sheets/character/partials/progression.hbs",
+        "systems/daggerheart/templates/sheets/character/partials/notes.hbs" 
     ];
     
     return loadTemplates(templatePaths);

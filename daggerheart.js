@@ -37,11 +37,12 @@ Hooks.once("ready", async () => {
 function preloadHandlebarsTemplates() {
 
     const templatePaths = [
-        "systems/daggerheart/templates/partials/character-sheet-origin.hbs",
+        "systems/daggerheart/templates/sheets/character/partials/origin.hbs",
         "systems/daggerheart/templates/partials/character-sheet-domain.hbs",
         "systems/daggerheart/templates/partials/character-sheet-items.hbs",
         "systems/daggerheart/templates/partials/character-sheet-progression.hbs",
-        "systems/daggerheart/templates/partials/character-sheet-notes.hbs"
+        "systems/daggerheart/templates/partials/character-sheet-notes.hbs",
+        "systems/daggerheart/templates/partials/character-sheet-background.hbs"
     ];
     
     return loadTemplates(templatePaths);

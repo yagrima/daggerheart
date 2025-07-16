@@ -11,8 +11,7 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
             submitOnChange: true,
             closeOnSubmit: false
         },
-        position: {
-            width: 650
+        position: {//die Größe ist variabel
         },
         tag: "form", //"pcActorSheet" verifizieren, ob das wirklich etwas tut
         /*window:{
@@ -45,7 +44,7 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
         //was zeige ich bei limited
         if (this.document.limited) options.parts = ["limted","footer"]
         //was zeige ich in jedem anderen Fall
-        else options.parts = ["body","footer"];
+        else options.parts = ["body"];
     }
     
     /** @override */

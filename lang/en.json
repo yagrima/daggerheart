@@ -1,0 +1,10 @@
+{
+    "DAGGERHEART":{
+        "agility":"AGILITY",
+        "finesse":"FINESSE",
+        "instinct":"INSTINCT",
+        "knowledge":"KNOWLEDGE",
+        "presence":"PRESENCE",
+        "strength":"STRENGTH"
+    }
+}

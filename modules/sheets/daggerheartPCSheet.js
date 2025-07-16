@@ -12,6 +12,7 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
             closeOnSubmit: false
         },
         position: {//die Größe ist variabel
+                width: 990
         },
         tag: "form", //"pcActorSheet" verifizieren, ob das wirklich etwas tut
         /*window:{

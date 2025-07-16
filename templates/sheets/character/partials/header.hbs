@@ -1,11 +1,77 @@
 <div class="headerbox">
     <div class="rollboxes">
-        <div class="rollbox agility">AGI</div>
-        <div class="rollbox strength">STR</div>
-        <div class="rollbox finesse">FIN</div>
-        <div class="rollbox instinct">INS</div>
-        <div class="rollbox presence">PRE</div>
-        <div class="rollbox knowledge">KNO</div>
+        <div class="rollbox agility">
+            <div class="attributename agility">
+                {{localize "DAGGERHEART.agility"}}
+            </div>
+            <img src="systems/daggerheart/assets/img/dh_attribute_transparent.png" alt="{{localize DAGGERHEART.agility}}" class="dhattribute agility"/>
+            <input class="attributeinput agility" type="text" name="agility" value="{{actor.system.agility.base}}">
+            <div class="buzzwords agility">
+                Sprint<br/>
+                Leap<br/>
+                Dodge<br/>
+            </div>
+        </div>
+        <div class="rollbox strength">
+            <div class="attributename strength">
+                {{localize "DAGGERHEART.strength"}}
+            </div>
+            <img src="systems/daggerheart/assets/img/dh_attribute_transparent.png" alt="{{localize DAGGERHEART.strength}}" class="dhattribute strength"/>
+            <input class="attributeinput strength" type="text" name="agility" value="{{actor.system.strength.base}}">
+            <div class="buzzwords strength">
+                Lift<br/>
+                Smash<br/>
+                Grapple<br/>
+            </div>
+        </div>
+        <div class="rollbox finesse">
+            <div class="attributename finesse">
+                {{localize "DAGGERHEART.finesse"}}
+            </div>
+            <img src="systems/daggerheart/assets/img/dh_attribute_transparent.png" alt="{{localize DAGGERHEART.strength}}" class="dhattribute finesse"/>
+            <input class="attributeinput finesse" type="text" name="agility" value="{{actor.system.strength.base}}">
+            <div class="buzzwords finesse">
+                Control<br/>
+                Hide<br/>
+                Tinker<br/>
+            </div>
+        </div>
+        <div class="rollbox instinct">
+            <div class="attributename instinct">
+                {{localize "DAGGERHEART.instinct"}}
+            </div>
+            <img src="systems/daggerheart/assets/img/dh_attribute_transparent.png" alt="{{localize DAGGERHEART.strength}}" class="dhattribute instinct"/>
+            <input class="attributeinput instinct" type="text" name="agility" value="{{actor.system.strength.base}}">
+            <div class="buzzwords instinct">
+                Perceive<br/>
+                Sense<br/>
+                Navigate<br/>
+            </div>
+        </div>
+        <div class="rollbox presence">
+            <div class="attributename presence">
+                {{localize "DAGGERHEART.presence"}}
+            </div>
+            <img src="systems/daggerheart/assets/img/dh_attribute_transparent.png" alt="{{localize DAGGERHEART.strength}}" class="dhattribute presence"/>
+            <input class="attributeinput presence" type="text" name="agility" value="{{actor.system.strength.base}}">
+            <div class="buzzwords presence">
+                Charm<br/>
+                Perform<br/>
+                Deceive<br/>
+            </div>
+        </div>
+        <div class="rollbox knowledge">
+            <div class="attributename knowledge">
+                {{localize "DAGGERHEART.knowledge"}}
+            </div>
+            <img src="systems/daggerheart/assets/img/dh_attribute_transparent.png" alt="{{localize DAGGERHEART.strength}}" class="dhattribute knowledge"/>
+            <input class="attributeinput knowledge" type="text" name="agility" value="{{actor.system.strength.base}}">
+            <div class="buzzwords knowledge">
+                Recall<br/>
+                Analyze<br/>
+                Comprehend<br/>
+            </div>
+        </div>
     </div>
     <div class="hopeboxes">
         {{localize DAGGERHEART.sthwithhope}}

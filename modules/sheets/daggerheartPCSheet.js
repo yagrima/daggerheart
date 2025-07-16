@@ -24,7 +24,7 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
 
     //https://foundryvtt.wiki/en/development/api/applicationv2#parts
     static PARTS = {
-        header: { template: "systems/daggerheart/templates/sheets/character/header.hbs" },
+        limited: { template: "systems/daggerheart/templates/sheets/character/limited.hbs" },
         body: { template: "systems/daggerheart/templates/sheets/character/body.hbs" },
         footer: { template: "systems/daggerheart/templates/sheets/character/footer.hbs" }
     }
@@ -43,9 +43,9 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
     _configureRenderOptions(options) {
         super._configureRenderOptions(options);
         //was zeige ich bei limited
-        if (this.document.limited) options.parts = ["header","footer"]
+        if (this.document.limited) options.parts = ["limted","footer"]
         //was zeige ich in jedem anderen Fall
-        else options.parts = ["header", "body","footer"];
+        else options.parts = ["body","footer"];
     }
     
     /** @override */

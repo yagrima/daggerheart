@@ -5,6 +5,7 @@
         "instinct":"INSTINCT",
         "knowledge":"KNOWLEDGE",
         "presence":"PRESENCE",
-        "strength":"STRENGTH"
+        "strength":"STRENGTH",
+        "generalroll":"ROLL"
     }
 }

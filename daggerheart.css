@@ -1,9 +1,19 @@
+.application {
+  background: rgba(54, 69, 79, 0.2);
+  --header-height: 10px;
+}
+.application .window-content {
+  padding: 0px;
+}
+.application .window-header {
+  background: rgba(54, 69, 79, 0.2);
+}
 .daggerheart.sheet.characterSheet .fullsheet {
   background-image: url(assets/img/background.png);
   border-radius: 15px;
   height: 525px;
   margin: 1px;
-  width: 990px;
+  width: 860px;
 }
 .daggerheart.sheet.characterSheet img.dhattribute {
   width: 68px;
@@ -15,6 +25,7 @@
   margin-right: 20px;
   position: relative;
   text-align: center;
+  vertical-align: top;
   width: 94px;
 }
 .daggerheart.sheet.characterSheet .attributename {

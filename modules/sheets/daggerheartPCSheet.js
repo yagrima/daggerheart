@@ -4,25 +4,28 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
 
     //https://foundryvtt.com/api/classes/foundry.applications.sheets.ActorSheetV2.html#default_options
     //https://foundryvtt.com/api/classes/foundry.applications.api.DocumentSheetV2.html#default_options
+    //https://foundryvtt.wiki/en/development/api/applicationv2#parts
     static DEFAULT_OPTIONS = {
-        actions: {},
+        actions: {
+            roll: daggerheartPCSheet.roll
+        },
         classes: ["daggerheart", "sheet", "characterSheet"],
         form: {
+            //handler: MyApplication.myFormHandler, < wäre eine Möglichkeit, brauchen wir aber nicht?
             submitOnChange: true,
             closeOnSubmit: false
         },
         position: {//die Größe ist variabel
-                width: 990
+                width: 860
         },
-        tag: "form", //"pcActorSheet" verifizieren, ob das wirklich etwas tut
-        /*window:{
-            controls:{
-                icon:""
+        tag: "form", //die Alternative wäre div ... also form ist richtig! -> löst _onSubmitForm und _onChangeForm aus
+        window:{
+            controls:{ 
+                icon:"assets/img/dh_logo_transparent.png"
             }
-        }*/
+        }
     }
 
-    //https://foundryvtt.wiki/en/development/api/applicationv2#parts
     static PARTS = {
         limited: { template: "systems/daggerheart/templates/sheets/character/limited.hbs" },
         body: { template: "systems/daggerheart/templates/sheets/character/body.hbs" },
@@ -80,22 +83,19 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
 
         const maintab = new apps.ux.Tabs({navSelector: ".maintab", contentSelector: ".content", initial: "maintab1"});
         maintab.bind(this.element);
-
         const sidetab = new apps.ux.Tabs({navSelector: ".sidetab", contentSelector: ".sidecontent", initial: "sidetab1"});
         sidetab.bind(this.element);
+        // this.element.querySelector("input[name=something]").addEventListener("click", /* ... */); < irgenwie sowas?
+    } 
+    
+    /**
+    
+    
+    */
+    static roll(event, target) {
+        // @param {PointerEvent} event - The originating click event
+        // @param {HTMLElement} target - the capturing HTML element which defined a [data-action]
+        
+        console.log(this) // logs the specific application class instance
     }
-
-
-    /*calculateExperiance(context) {
-        let earndExp = context.system.experience.earndExp;
-        let competence = context.system.experience.competence;
-        let spentExp = 0;
-        let level = 0;
-
-        // Calculate Level
-        level = ( Math.ceil( (earndExp / 1000) * CONFIG.NETHER.compLvlMultiplier[competence]) - 1);
-        context.system.experience.spentExp = spentExp;
-        context.system.experience.level = level;
-        return context;
-    }*/
 }

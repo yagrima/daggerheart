@@ -7,23 +7,17 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
     //https://foundryvtt.wiki/en/development/api/applicationv2#parts
     static DEFAULT_OPTIONS = {
         actions: {
-            roll: daggerheartPCSheet.roll
+            _roll: daggerheartPCSheet._roll
         },
         classes: ["daggerheart", "sheet", "characterSheet"],
-        form: {
-            //handler: MyApplication.myFormHandler, < wäre eine Möglichkeit, brauchen wir aber nicht?
+        form: { 
             submitOnChange: true,
             closeOnSubmit: false
         },
         position: {//die Größe ist variabel
                 width: 860
         },
-        tag: "form", //die Alternative wäre div ... also form ist richtig! -> löst _onSubmitForm und _onChangeForm aus
-        window:{
-            controls:{ 
-                icon:"assets/img/dh_logo_transparent.png"
-            }
-        }
+        tag: "form" //die Alternative wäre div ... also form ist richtig! -> löst _onSubmitForm und _onChangeForm aus
     }
 
     static PARTS = {
@@ -80,22 +74,16 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
     //finishing the initialisation = this method
     //Memo: Ich habe die Tabs umbenannt!
     _onRender(context, options) {
-
         const maintab = new apps.ux.Tabs({navSelector: ".maintab", contentSelector: ".content", initial: "maintab1"});
         maintab.bind(this.element);
         const sidetab = new apps.ux.Tabs({navSelector: ".sidetab", contentSelector: ".sidecontent", initial: "sidetab1"});
         sidetab.bind(this.element);
         // this.element.querySelector("input[name=something]").addEventListener("click", /* ... */); < irgenwie sowas?
     } 
-    
-    /**
-    
-    
-    */
-    static roll(event, target) {
+    async _roll(event, target) {
         // @param {PointerEvent} event - The originating click event
         // @param {HTMLElement} target - the capturing HTML element which defined a [data-action]
-        
-        console.log(this) // logs the specific application class instance
+        console.log(this); // logs the specific application class instance
+        console.log("asdf");
     }
 }

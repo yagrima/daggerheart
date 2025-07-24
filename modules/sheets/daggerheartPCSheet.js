@@ -1,3 +1,5 @@
+import * as Listener from "../listenerFunctions.js";
+
 const apps = foundry.applications;
 export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMixin(apps.sheets.ActorSheetV2) {
     sheetContext = {};
@@ -80,10 +82,13 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
         sidetab.bind(this.element);
         // this.element.querySelector("input[name=something]").addEventListener("click", /* ... */); < irgenwie sowas?
     } 
-    async _roll(event, target) {
+    static async _roll(event, target) {
         // @param {PointerEvent} event - The originating click event
         // @param {HTMLElement} target - the capturing HTML element which defined a [data-action]
-        console.log(this); // logs the specific application class instance
-        console.log("asdf");
+        console.log("Starting Roll Function in actorsheet.js")
+        console.log(this.document.system); //character information
+        console.log("switching to listener function")
+        Listener._dualityRoll(this.document.system);
+        console.log("listener function resolved");
     }
 }

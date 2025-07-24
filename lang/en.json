@@ -7,6 +7,11 @@
         "presence":"PRESENCE",
         "strength":"STRENGTH",
         "generalroll":"ROLL",
-        "rollicon":"CLICK TO ROLL"
+        "rollicon":"CLICK TO ROLL",
+        "dialog":{
+            "cancel":"CANCEL",
+            "std":"STANDARD ROLL",
+            "title":"STANDARD ROLL"
+        }
     }
 }

@@ -1,9 +1,10 @@
 import * as Dialog from "./dialog.js"
 
-export async function _defaultCheck(){
-    console.log("This is the dice roll.");
-    //react to dialogue cancelling
-    let checkOptions = await Dialog._getDefaultOptions();
+export async function _defaultCheck(chardata){
+    console.log("getting dice roll information"); 
+    let checkOptions = await Dialog._getRollInformation(chardata);
+    console.log("getRollInformation:"+checkOptions);
+    //Abbruch bei Schließen des Würfeldialogs
     if(checkOptions.cancelled) return;
     //hier die Experiences?
     //hier Hope Die

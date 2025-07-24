@@ -12,7 +12,7 @@ export async function _getRollInformation(chardata){
     const response = api.DialogV2.prompt({
         content,
         ok: {
-            callback: (event,button,dialog) => button.form.elements,
+            callback: (event, button, dialog)  => [{"hopedie": button.form.elements.hopedie.value, "feardie": button.form.elements.feardie.value}],
             label: game.i18n.localize("DAGGERHEART.dialog.std"),
             "icon": "fa-solid fa-dice-d12"
         },
@@ -20,14 +20,6 @@ export async function _getRollInformation(chardata){
                 title: game.i18n.localize("DAGGERHEART.dialog.title")
         }
     }) 
-    //console.log("in function reponse log:"+await response)
-    if(await response == "ok"){
-        editedReponse = "very much not okay";
-    }
-    
-    return editedReponse;
-}
-export async function myConfirmationButton(){
-    return "not okay";
-}
+    return response;
+} 
  

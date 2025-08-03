@@ -1,30 +1,71 @@
 import * as Dialog from "./dialog.js"
 
 export async function _defaultCheck(chardata){
+    console.log("chardata:"+JSON.stringify(chardata));
     console.log("getting dice roll information"); 
     let checkOptions = await Dialog._getRollInformation(chardata);
+
     //Abbruch bei Schließen des Würfeldialogs
     if(checkOptions.cancelled) return;
     //hier die Experiences?
 
     //hier Hope Die
-    console.log("Hope Die:"+checkOptions[0].hopedie);
     let hope = checkOptions[0].hopedie;
 
     //hier Fear Die
-    console.log("Fear Die:"+checkOptions[0].feardie);
     let fear = checkOptions[0].feardie;
     
     //hier Advantage
-    let advantage = "c";
+    let advantage = checkOptions[0].advantage;
+
     //hier Disadvantage
-    let disadvantage = "d";
-    return _dualityRoll(hope,fear,advantage,disadvantage);
+    let disadvantage = checkOptions[0].disadvantage;
+
+    
+    return _dualityRoll(chardata,hope,fear,advantage,disadvantage);
 }
 
-export async function _dualityRoll(hope,fear,advantage,disadvantage){
-    console.log(hope);
-    console.log(fear);
-    console.log(advantage);
-    console.log(disadvantage);
+export async function _dualityRoll(chardata,hope,fear,advantage,disadvantage){
+    console.log(`${hope}/${fear}/${advantage}/${disadvantage}`);
+    const template = "systems/daggerheart/templates/chat/standard-roll-dialog.hbs"; 
+
+    let hopeResult = await _rollSimpleDie(hope); 
+    let fearResult = await _rollSimpleDie(fear); 
+    let advantageResult = await _rollAdvantageDie(advantage); 
+    let disadvantageResult = await _rollAdvantageDie(disadvantage); 
+
+    let isHope = hopeResult.total > fearResult.total;
+    let isFear = hopeResult.total < fearResult.total;
+    let isCrit = hopeResult.total === fearResult.total;
+    let total = hopeResult.total + fearResult.total + advantageResult - disadvantageResult;
+    console.log(total);
+
+    let templateContext = {
+        name: chardata.name,
+        hope: hopeResult.total,
+        fear: fearResult.total,
+        advantage: advantageResult,
+        disadvantage: disadvantageResult,
+        isHope: isHope,
+        isFear: isFear,
+        isCrit: isCrit,
+        total: total
+    }
+    console.log(JSON.stringify(templateContext));
+    let chatData = {
+        user: game.user.id,
+        speaker: "Dummy",
+        sound: CONFIG.sounds.dice,
+        content: await foundry.applications.handlebars.renderTemplate(template,templateContext)
+    }
+    ChatMessage.create(chatData);
+}
+export async function _rollAdvantageDie(dicecode){
+    if(dicecode.includes("d") && dicecode.split("d")[1].length > 0)
+        return (await _rollSimpleDie("d"+advantage.split("d")[1])).result;
+    return 0;
+}
+export async function _rollSimpleDie(dicecode){
+    let dicecodeResult = new Roll("1"+dicecode,{});
+    return dicecodeResult.evaluate();
 }

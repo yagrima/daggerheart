@@ -12,7 +12,12 @@ export async function _getRollInformation(chardata){
     const response = api.DialogV2.prompt({
         content,
         ok: {
-            callback: (event, button, dialog)  => [{"hopedie": button.form.elements.hopedie.value, "feardie": button.form.elements.feardie.value}],
+            callback: (event, button, dialog)  => [{
+                "hopedie": button.form.elements.hopedie.value,
+                "feardie": button.form.elements.feardie.value,
+                "advantage": button.form.elements.advantage.value,
+                "disadvantage": button.form.elements.disadvantage.value
+            }],
             label: game.i18n.localize("DAGGERHEART.dialog.std"),
             "icon": "fa-solid fa-dice-d12"
         },

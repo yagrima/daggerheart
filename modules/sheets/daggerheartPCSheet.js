@@ -42,7 +42,7 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
     _configureRenderOptions(options) {
         super._configureRenderOptions(options);
         //was zeige ich bei limited
-        if (this.document.limited) options.parts = ["limted","footer"]
+        if (this.document.limited) options.parts = ["limited","footer"]
         //was zeige ich in jedem anderen Fall
         else options.parts = ["body"];
     }
@@ -66,8 +66,8 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
         };
 
         //Funktionen, die sonst auch in daggerheartActor.js sein könnten
-        //context = this.calculateExperiance(context);
-        
+        //context = this.calculateExperiance(context); 
+
         this.sheetContext = context;
         return context;
     }
@@ -88,7 +88,7 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
         console.log("Starting Roll Function in actorsheet.js")
         console.log(this.document.system);
         console.log("switching to listener function")
-        Listener._dualityRoll(this.document.system);
+        Listener._dualityRollPrep(this.document.system);
         console.log("listener function resolved");
     }
 }

@@ -9,9 +9,20 @@
         "generalroll":"ROLL",
         "rollicon":"CLICK TO ROLL",
         "dialog":{
+            "advantage":"ADVANTAGE",
             "cancel":"CANCEL",
+            "disadvantage":"DISADVANTAGE",
+            "fear":"FEAR",
+            "hope":"HOPE",
             "std":"STANDARD ROLL",
             "title":"STANDARD ROLL"
+        },
+        "chat": {
+            "crit": "CRITICAL SUCCESS",
+            "fear": "ROLL WITH FEAR",
+            "hope": "ROLL WITH HOPE",
+            "standardroll": "STANDARD ROLL"
+
         }
     }
 }

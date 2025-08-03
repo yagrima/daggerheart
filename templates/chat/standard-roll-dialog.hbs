@@ -1,0 +1,42 @@
+<div class="chatmessage">
+    <div class="headline">{{localize "DAGGERHEART.chat.standardroll"}}</div>
+    <div class="dicefield">
+        <div class="advantagefield">
+            {{advantage}}
+        </div>
+        <div class="hopefield">
+            {{hope}}
+        </div>
+        <div class="fearfield">
+            {{fear}}
+        </div>
+        <div class="disadvantagefield">
+            {{disadvantage}}
+        </div>
+    </div>
+    {{#if isHope}}
+        <div class="resultbox">
+            {{total}}
+        </div>
+    {{/if}}
+    {{#if isFear}}
+        <div class="resultbox">
+            {{total}}
+        </div>
+    {{/if}}
+    {{#if isHope}}
+        <div class="hopebox">
+            {{localize "DAGGERHEART.chat.hope"}}
+        </div>
+    {{/if}}
+    {{#if isFear}}
+        <div class="fearbox">
+            {{localize "DAGGERHEART.chat.fear"}}
+        </div>
+    {{/if}}
+    {{#if isCrit}}
+        <div class="critbox">
+            {{localize "DAGGERHEART.chat.crit"}}
+        </div>
+    {{/if}}   
+</div>

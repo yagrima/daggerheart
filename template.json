@@ -21,6 +21,7 @@
                 "maxhp":5,
                 "currentstress": 5,
                 "maxstress":5,
+                "proficiency":1,
                 "armorbasescore":0,
                 "damagethreshold1":1,
                 "damagethreshold2":2,

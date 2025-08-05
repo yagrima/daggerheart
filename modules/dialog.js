@@ -13,6 +13,7 @@ export async function _getRollInformation(chardata){
         content,
         ok: {
             callback: (event, button, dialog)  => [{
+                "attributebonus": button.form.elements.attributebonus.value,
                 "hopedie": button.form.elements.hopedie.value,
                 "feardie": button.form.elements.feardie.value,
                 "advantage": button.form.elements.advantage.value,

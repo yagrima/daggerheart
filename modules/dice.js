@@ -1,12 +1,15 @@
 import * as Dialog from "./dialog.js"
 
 export async function _defaultCheck(chardata){
-    console.log("chardata:"+JSON.stringify(chardata));
+    //console.log("chardata:"+JSON.stringify(chardata));
     console.log("getting dice roll information"); 
     let checkOptions = await Dialog._getRollInformation(chardata);
 
     //Abbruch bei Schließen des Würfeldialogs
     if(checkOptions.cancelled) return;
+    //hier der Attributsbonus
+    let attributebonus = checkOptions[0].attributebonus;
+
     //hier die Experiences?
 
     //hier Hope Die
@@ -22,11 +25,11 @@ export async function _defaultCheck(chardata){
     let disadvantage = checkOptions[0].disadvantage;
 
     
-    return _dualityRoll(chardata,hope,fear,advantage,disadvantage);
+    return _dualityRoll(chardata,attributebonus,hope,fear,advantage,disadvantage);
 }
 
-export async function _dualityRoll(chardata,hope,fear,advantage,disadvantage){
-    console.log(`${hope}/${fear}/${advantage}/${disadvantage}`);
+export async function _dualityRoll(chardata,attributebonus,hope,fear,advantage,disadvantage){
+    console.log(`${attributebonus}/${hope}/${fear}/${advantage}/${disadvantage}`);
     const template = "systems/daggerheart/templates/chat/standard-roll-dialog.hbs"; 
 
     let hopeResult = await _rollSimpleDie(hope); 
@@ -37,11 +40,15 @@ export async function _dualityRoll(chardata,hope,fear,advantage,disadvantage){
     let isHope = hopeResult.total > fearResult.total;
     let isFear = hopeResult.total < fearResult.total;
     let isCrit = hopeResult.total === fearResult.total;
-    let total = hopeResult.total + fearResult.total + advantageResult - disadvantageResult;
+    //bei Gelegenheit Handling für fehlerhafte Eingaben für attributebonus ergänzen
+    let total = hopeResult.total + fearResult.total + advantageResult - disadvantageResult + parseInt(attributebonus);
     console.log(total);
+    let attributebonusText = parseInt(attributebonus) < 0 ? ""+parseInt(attributebonus) : "+"+parseInt(attributebonus);
+    console.log(attributebonusText);
 
     let templateContext = {
         name: chardata.name,
+        attributebonus: attributebonusText,
         hope: hopeResult.total,
         fear: fearResult.total,
         advantage: advantageResult,

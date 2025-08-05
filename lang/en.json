@@ -10,6 +10,7 @@
         "rollicon":"CLICK TO ROLL",
         "dialog":{
             "advantage":"ADVANTAGE",
+            "bonus": "ATTRIBUTE",
             "cancel":"CANCEL",
             "disadvantage":"DISADVANTAGE",
             "fear":"FEAR",

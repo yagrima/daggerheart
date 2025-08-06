@@ -7,6 +7,7 @@ export async function _getRollInformation(chardata){
     let event = {};
     let dialog = {};
     let button = {};
+    //console.log("CHARDATA:"+JSON.stringify(chardata));
     const template = "systems/daggerheart/templates/dialog/standard-roll-dialog.hbs"
     const content = await handlebars.renderTemplate(template,chardata)
     const response = api.DialogV2.prompt({
@@ -14,6 +15,8 @@ export async function _getRollInformation(chardata){
         ok: {
             callback: (event, button, dialog)  => [{
                 "attributebonus": button.form.elements.attributebonus.value,
+                "experience1": button.form.elements.experience1.checked,
+                "experience2": button.form.elements.experience2.checked,
                 "hopedie": button.form.elements.hopedie.value,
                 "feardie": button.form.elements.feardie.value,
                 "advantage": button.form.elements.advantage.value,
@@ -25,7 +28,7 @@ export async function _getRollInformation(chardata){
         window: {
                 title: game.i18n.localize("DAGGERHEART.dialog.title")
         }
-    }) 
+    })  
     return response;
 } 
  

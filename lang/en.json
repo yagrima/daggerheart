@@ -21,9 +21,9 @@
             "disadvantage":"DISADVANTAGE",
             "fear":"FEAR",
             "hope":"HOPE",
-            "std":"STANDARD ROLL",
-            "title":"STANDARD ROLL"
-        },
+            "std":"Standard Roll",
+            "title":"Standard Roll"
+        }, 
         "resources":{
             "experiences":"EXPERIENCES"
         }

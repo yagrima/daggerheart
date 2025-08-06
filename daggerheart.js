@@ -47,7 +47,7 @@ function preloadHandlebarsTemplates() {
         "systems/daggerheart/templates/sheets/character/partials/resources.hbs"
     ];
     
-    return loadTemplates(templatePaths);
+    return foundry.applications.handlebars.loadTemplates(templatePaths);
 };
 
 function registerHandlebarsHelpers() {

@@ -1,4 +1,4 @@
-import * as Listener from "../listenerFunctions.js";
+import * as Listener from "../listenerFunctions.js"; 
 
 const apps = foundry.applications;
 export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMixin(apps.sheets.ActorSheetV2) {
@@ -65,9 +65,8 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
             effects: baseData.document.effects
         };
 
-        //Funktionen, die sonst auch in daggerheartActor.js sein könnten
-        //context = this.calculateExperiance(context); 
-
+        //Funktionen, die sonst auch in daggerheartActor.js sein könnten 
+        //replace with localised placeholders  
         this.sheetContext = context;
         return context;
     }

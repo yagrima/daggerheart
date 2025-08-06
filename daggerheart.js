@@ -43,7 +43,8 @@ function preloadHandlebarsTemplates() {
         "systems/daggerheart/templates/sheets/character/partials/items.hbs",
         "systems/daggerheart/templates/sheets/character/partials/progression.hbs",
         "systems/daggerheart/templates/sheets/character/partials/notes.hbs",
-        "systems/daggerheart/templates/sheets/character/partials/header.hbs" 
+        "systems/daggerheart/templates/sheets/character/partials/header.hbs" ,
+        "systems/daggerheart/templates/sheets/character/partials/resources.hbs"
     ];
     
     return loadTemplates(templatePaths);

@@ -86,7 +86,7 @@ export default class daggerheartPCSheet extends apps.api.HandlebarsApplicationMi
         // @param {PointerEvent} event - The originating click event
         // @param {HTMLElement} target - the capturing HTML element which defined a [data-action]
         console.log("Starting Roll Function in actorsheet.js")
-        //console.log(this.document.system);
+        console.log(this.document.system);
         console.log("switching to listener function")
         Listener._dualityRollPrep(this.document.system);
         console.log("listener function resolved");

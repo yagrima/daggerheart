@@ -1,22 +1,41 @@
 <div class="outerImagebox">
     <div class="fillSideboxTop"></div>
     <div class="innerImagebox">
-        <img class="pcImage" src="{{actor.img}}" data-edit="img" data-action="editImage" title="{{actor.name}}" >
-        <div class="imageOverlay">
-            {{actor.name}}
+        <img class="pcImage" src="{{actor.img}}" data-edit="img" data-action="editImage" title="{{actor.name}}" />
+        <div class="imageOverlay"> 
+            <input class="imageNamebox" type="text" name="name" value="{{actor.name}}">
         </div>
+    </div>
+    <div class="fillSideboxMiddle"></div>
+</div>
+<div class="outerExperiencebox">
+    <div class="fillSideboxTop"></div>
+    <div class="innerExperiencebox">
+        <div class="attributename agility">
+            {{localize "DAGGERHEART.resources.experiences"}}
+        </div>
+        <input class="experienceBox" type="text" name="system.experience1.name" value="{{system.experience1.name}}"/>
+        <input class="bonusBox" type="text" name="system.experience1.bonus" value="{{system.experience1.bonus}}"/>
+        {{localize DAGGERHEART.resources.experience2}} 
+        <input class="experienceBox" type="text" name="system.experience2.name" value="{{system.experience2.name}}"/>
     </div>
     <div class="fillSideboxMiddle"></div>
 </div>
 <div class="outerResourcebox">
     <div class="ressourceHealth">
-        <div class="healthBox">{{localize DAGGERHEART.health}}</div>
+        <div class="healthBox">
+            {{localize DAGGERHEART.health}}
+        </div>
     </div>
     <div class="ressourceStress">
-        <div class="healthBox">{{localize DAGGERHEART.stress}}</div>
+        <div class="healthBox">
+            {{localize DAGGERHEART.stress}}
+        </div>
     </div>
     <div class="ressourceArmor">
-        <div class="healthBox">{{localize DAGGERHEART.health}}</div>
+        <div class="healthBox">
+            {{localize DAGGERHEART.health}}
+        </div>
     </div> 
     <div class="fillSideboxBottom"></div>
 </div>

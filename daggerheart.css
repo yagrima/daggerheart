@@ -75,7 +75,60 @@
   padding: 10px;
 }
 .daggerheart.sheet.characterSheet .pcImage {
-  width: 60px;
+  height: 162px;
+  border-radius: 5px;
+  width: 100px;
+}
+.daggerheart.sheet.characterSheet .outerImagebox {
+  background-color: rgba(54, 69, 79, 0.5);
+  border: 1px;
+  border-color: #ffd700;
+  border-radius: 15px;
+  display: inline-block;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.daggerheart.sheet.characterSheet .imageNamebox {
+  background-color: rgba(54, 69, 79, 0);
+  height: 20px;
+  padding-top: 5px;
+  text-align: center;
+  width: 100px;
+}
+.daggerheart.sheet.characterSheet .outerExperiencebox {
+  background-color: rgba(54, 69, 79, 0.5);
+  border: 1px;
+  border-color: #ffd700;
+  border-radius: 15px;
+  display: inline-block;
+  height: 203px;
+  margin-left: 5px;
+  padding: 10px;
+  vertical-align: top;
+  width: 150px;
+}
+.daggerheart.sheet.characterSheet .experienceBox {
+  background-color: rgba(54, 69, 79, 0);
+  height: 20px;
+  overflow-wrap: break-word;
+  padding: 3px;
+  text-align: left;
+  width: 120px;
+}
+.daggerheart.sheet.characterSheet .outerResourcebox {
+  background-color: rgba(54, 69, 79, 0.5);
+  border: 1px;
+  border-color: #ffd700;
+  border-radius: 15px;
+  display: inline-block;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 .chat-message {
   background-image: url(assets/img/background.png);

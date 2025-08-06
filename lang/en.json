@@ -8,6 +8,12 @@
         "strength":"STRENGTH",
         "generalroll":"ROLL",
         "rollicon":"CLICK TO ROLL",
+        "chat": {
+            "crit": "CRITICAL SUCCESS",
+            "fear": "ROLL WITH FEAR",
+            "hope": "ROLL WITH HOPE",
+            "standardroll": "STANDARD ROLL"
+        },
         "dialog":{
             "advantage":"ADVANTAGE",
             "bonus": "ATTRIBUTE",
@@ -18,12 +24,8 @@
             "std":"STANDARD ROLL",
             "title":"STANDARD ROLL"
         },
-        "chat": {
-            "crit": "CRITICAL SUCCESS",
-            "fear": "ROLL WITH FEAR",
-            "hope": "ROLL WITH HOPE",
-            "standardroll": "STANDARD ROLL"
-
+        "resources":{
+            "experiences":"EXPERIENCES"
         }
     }
 }

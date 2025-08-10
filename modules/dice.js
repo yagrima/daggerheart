@@ -85,7 +85,7 @@ export async function _dualityRoll(chardata,attributebonus,experiences,hope,fear
 }
 export async function _rollAdvantageDie(dicecode){
     if(dicecode.includes("d") && dicecode.split("d")[1].length > 0)
-        return (await _rollSimpleDie("d"+advantage.split("d")[1])).result;
+        return (await _rollSimpleDie("d"+dicecode.split("d")[1])).result;
     return 0;
 }
 export async function _rollSimpleDie(dicecode){

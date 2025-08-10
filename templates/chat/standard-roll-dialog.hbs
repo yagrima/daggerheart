@@ -6,7 +6,7 @@
     <div class="dicefield">
         <div class="advantagefield">
             <div class="diceoverlay">
-                
+                <img src="systems/daggerheart/assets/dice/advantageD6.png" alt="{{localize DAGGERHEART.d6}}" class="advantagedie"/>
             </div>
             <div class="textoverlay-white">
                 {{advantage}}
@@ -14,7 +14,7 @@
         </div>
         <div class="hopefield">
             <div class="diceoverlay">
-                <img src="systems/daggerheart/assets/dice/D12_HOPE.png" alt="{{localize DAGGERHEART.d12}}" class="hopedie"/>
+                <img src="systems/daggerheart/assets/dice/hopeD12.png" alt="{{localize DAGGERHEART.d12}}" class="hopedie"/>
             </div>
             <div class="textoverlay-black">
                 {{hope}}
@@ -22,14 +22,19 @@
         </div>
         <div class="fearfield">
             <div class="diceoverlay">
-                <img src="systems/daggerheart/assets/dice/D12_FEAR.png" alt="{{localize DAGGERHEART.d12}}" class="feardie"/>
+                <img src="systems/daggerheart/assets/dice/fearD12.png" alt="{{localize DAGGERHEART.d12}}" class="feardie"/>
             </div>
             <div class="textoverlay-white">
                 {{fear}}
             </div>
         </div>
         <div class="disadvantagefield">
-            {{disadvantage}}
+            <div class="diceoverlay">
+                <img src="systems/daggerheart/assets/dice/advantageD6.png" alt="{{localize DAGGERHEART.d6}}" class="disadvantagedie"/>
+            </div>
+            <div class="textoverlay-white">
+                {{disadvantage}}
+            </div> 
         </div>
     </div>
     {{#if isHope}}

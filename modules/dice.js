@@ -9,6 +9,8 @@ export async function _defaultCheck(chardata){
     if(checkOptions.cancelled) return;
     //hier der Attributsbonus
     let attributebonus = checkOptions[0].attributebonus;
+    if(!attributebonus)
+        attributebonus = 0;
 
     //hier die Experiences?
     let experiences = [];
@@ -54,7 +56,7 @@ export async function _dualityRoll(chardata,attributebonus,experiences,hope,fear
     let isFear = hopeResult.total < fearResult.total;
     let isCrit = hopeResult.total === fearResult.total;
     //bei Gelegenheit Handling für fehlerhafte Eingaben für attributebonus ergänzen
-    let total = hopeResult.total + fearResult.total + advantageResult - disadvantageResult + parseInt(attributebonus) +parseInt(experienceBonus);
+    let total = hopeResult.total + fearResult.total + parseInt(advantageResult) - parseInt(disadvantageResult) + parseInt(attributebonus) +parseInt(experienceBonus);
     //console.log(total);
     //for graphical purposes a "+X" notation is preferred to a "X" notation
     let attributebonusText = parseInt(attributebonus) < 0 ? ""+parseInt(attributebonus) : "+"+parseInt(attributebonus);
